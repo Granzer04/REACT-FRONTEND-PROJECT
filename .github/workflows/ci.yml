@@ -20,7 +20,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Install required dev dependencies
-        run: npm install --save-dev jsdom jest @testing-library/react @babel/preset-react @babel/preset-env
+        run: npm install --save-dev jest@29 jsdom@20 @testing-library/react @babel/preset-react @babel/preset-env
       - name: Run tests
         run: npm test
       - name: Build app
