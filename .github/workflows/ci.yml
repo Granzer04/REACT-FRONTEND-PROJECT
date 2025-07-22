@@ -19,10 +19,8 @@ jobs:
           node-version: '20'
       - name: Clean install (remove node_modules and lock files)
         run: rm -rf node_modules package-lock.json npm-shrinkwrap.json
-      - name: Install dependencies
-        run: npm install
-      - name: Install required dev dependencies
-        run: npm install --save-dev jest@29 jsdom@20 @testing-library/react @babel/preset-react @babel/preset-env
+      - name: Install exact compatible dev dependencies
+        run: npm install --save-dev jest@29.7.0 jsdom@20.0.3 @testing-library/react@14.2.1 @babel/preset-react@7.24.3 @babel/preset-env@7.24.3
       - name: Run tests
         run: npm test
       - name: Build app
