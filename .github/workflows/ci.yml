@@ -20,6 +20,8 @@ jobs:
       - name: Clean install (remove node_modules and lock files)
         run: rm -rf node_modules package-lock.json
       - name: Install dependencies
+        run: npm install
+      - name: Install required dev dependencies
         run: npm install --save-dev jest@29 jsdom@20 @testing-library/react @babel/preset-react @babel/preset-env
       - name: Run tests
         run: npm test
