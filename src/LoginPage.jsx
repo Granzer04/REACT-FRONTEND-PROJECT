@@ -38,8 +38,9 @@ const LoginPage = () => {
       </div>
       <form onSubmit={handleLogin}>
         <div style={{ marginBottom: 16 }}>
-          <label style={{ display: 'block', marginBottom: 4, color: '#555' }}>Username:</label>
+          <label htmlFor="username" style={{ display: 'block', marginBottom: 4, color: '#555' }}>Username:</label>
           <input
+            id="username"
             type="text"
             value={username}
             onChange={e => setUsername(e.target.value)}
@@ -51,8 +52,9 @@ const LoginPage = () => {
           />
         </div>
         <div style={{ marginBottom: 16 }}>
-          <label style={{ display: 'block', marginBottom: 4, color: '#555' }}>Password:</label>
+          <label htmlFor="password" style={{ display: 'block', marginBottom: 4, color: '#555' }}>Password:</label>
           <input
+            id="password"
             type="password"
             value={password}
             onChange={e => setPassword(e.target.value)}
